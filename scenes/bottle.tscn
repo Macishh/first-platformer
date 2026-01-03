@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://clbt2nv15siab"]
+
+[ext_resource type="Texture2D" uid="uid://obv11d7075h8" path="res://assets/sprites/world_tileset.png" id="1_724mw"]
+[ext_resource type="Script" uid="uid://t3s0cicbjpj7" path="res://scripts/coin.gd" id="1_qr18b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_724mw"]
+size = Vector2(8, 14)
+
+[node name="Bottle" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_qr18b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_724mw")
+region_enabled = true
+region_rect = Rect2(4, 130, 8, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_724mw")
